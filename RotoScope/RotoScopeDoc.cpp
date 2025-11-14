@@ -712,32 +712,42 @@ void CRotoScopeDoc::DrawImage()
 
         }
 
-        // Draw the lines from the points we gathered
-        int lines = points.size() / 2;
-        int index = 0;
-        for (int i = 0; i < lines; ++i)
+        // Check if we have to draw the bird, or the lines
+        if (points.size() > 1)
         {
-            int x1 = points[index].first;
-            int y1 = points[index].second;
+            if (points.size() == 2)
+            {
+                OnEditClearframe();
+            }
 
-            int x2 = points[++index].first;
-            int y2 = points[index].second;
+            // Draw the lines from the points we gathered
+            int lines = points.size() / 2;
+            int index = 0;
+            for (int i = 0; i < lines; ++i)
+            {
+                int x1 = points[index].first;
+                int y1 = points[index].second;
 
-            index++;
-            
-            DrawLine(m_image, x1, y1, x2, y2, 3); // Change the width of the line here
+                int x2 = points[++index].first;
+                int y2 = points[index].second;
+
+                index++;
+
+                DrawLine(m_image, x1, y1, x2, y2, 5); // Change the width of the line here
+            }
         }
-
-        // Draw the bird at the points
-        //int x = 0;
-        //int y = 0;
-        //if (points.size() > 0)
-        //{
-        //    x = points[0].first;
-        //    y = points[0].second;
-        //}
-        //DrawBird(m_image, x, y);
-
+        else
+        {
+            // Draw the bird at the points
+            int x = 0;
+            int y = 0;
+            if (points.size() > 0)
+            {
+                x = points[0].first;
+                y = points[0].second;
+            }
+            DrawBird(m_image, x, y);
+        }
     }
 
 
@@ -745,23 +755,16 @@ void CRotoScopeDoc::DrawImage()
     UpdateAllViews(NULL);
 }
 
-/*
-Current Idea
-1) Make a xml file that had the end tips of the blades
-2) store each point in an array
-3) use the points to draw the array
 
-else to do:
-make the lines thicker and change color (Done)
-*/
 
 void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, int width)
 {
     // Color Variables
-    int red = 0;  // 191
-    int green = 150; // 64
-    int blue = 255; // 191
+    int red = 0;  
+    int green = 150; 
+    int blue = 255; 
 
+    // Used to draw the line wider
     int end = width / 2;
     int start = -end;
 
@@ -784,6 +787,7 @@ void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, in
             }
             else 
             {
+                // Draw the line wider
                 for (int i = start; i < end; ++i)
                 {
                     image.Set(x1, y1 + i, red, green, blue);
@@ -805,6 +809,7 @@ void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, in
                 }
                 else
                 {
+                    // Draw the line wider
                     for (int i = start; i < end; ++i)
                     {
                         image.Set(x, (y1 + (x - x1) * (y2 - y1) / (x2 - x1)) + i, red, green, blue);
@@ -836,6 +841,7 @@ void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, in
             }
             else
             {
+                // Draw the line wider
                 for (int i = start; i < end; ++i)
                 {
                     image.Set(x1 + i, y1, red, green, blue);
@@ -858,6 +864,7 @@ void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, in
                 }
                 else
                 {
+                    // Draw the line wider
                     for (int i = start; i < end; ++i)
                     {
                         image.Set(x + i, y, red, green, blue);
