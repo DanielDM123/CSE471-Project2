@@ -697,23 +697,25 @@ void CRotoScopeDoc::DrawImage()
     // Write any saved drawings into the frame
     if (m_movieframe < (int)m_draw.size())
     {
+        // Save the points we get from the XMl file
         vector< pair<int, int> > points;
 
+        // This draws the dots from the XMl file
         for (list<CPoint>::iterator i = m_draw[m_movieframe].begin();
             i != m_draw[m_movieframe].end();  i++)
         {
             m_image.Set(i->x, i->y, 255, 0, 0); // This draws the dots 
 
-            // Get the point and add it to the list
+            // Store the point
             pair<int, int> temp = make_pair(i->x, i->y);
             points.push_back(temp);
 
         }
 
         // Draw the lines from the points we gathered
-        int sabers = points.size() / 2;
+        int lines = points.size() / 2;
         int index = 0;
-        for (int i = 0; i < sabers; ++i)
+        for (int i = 0; i < lines; ++i)
         {
             int x1 = points[index].first;
             int y1 = points[index].second;

@@ -1,0 +1,16 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  pch.cpp
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  RotoScopeView.cpp
+  RotoScopeDoc.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Enterprise\VC\Tools\MSVC\14.44.35207\include\numbers(11): warning STL4038: The contents of <numbers> are available only with C++20 or later.
+  RotoScope.cpp
+  MovieSource.cpp
+  MovieMake.cpp
+  MainFrm.cpp
+  GrImage.cpp
+  DirSoundSource.cpp
+  ChildFrm.cpp
+  Generating Code...
+ChildFrm.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  RotoScope.vcxproj -> C:\Users\mardanie\source\repos\Project2\Debug\RotoScope.exe
