@@ -96,7 +96,8 @@ public:
     void DrawImage();
     void DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, int width = 1);
     void DrawBird(CGrImage& image, int x1, int y1);
-    void RotateImage();
+    void ClearBirdImage(CGrImage& image, int x1, int y1);
+
 };
 
 

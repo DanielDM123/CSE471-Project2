@@ -668,6 +668,7 @@ void CRotoScopeDoc::XmlLoadFrame(IXMLDOMNode* xml)
         }
     }
 }
+
 void CRotoScopeDoc::OnEditClearframe()
 {
     if (m_movieframe >= 0 &&
@@ -689,8 +690,7 @@ void CRotoScopeDoc::DrawImage()
             m_image[r][c * 3 + 1] = m_initial[r][c * 3 + 1];
             m_image[r][c * 3 + 2] = m_initial[r][c * 3 + 2];
 
-            // Rotate Image
-            //RotateImage();
+
         }
     }
 
@@ -717,7 +717,9 @@ void CRotoScopeDoc::DrawImage()
         {
             if (points.size() == 2)
             {
-                OnEditClearframe();
+
+                ClearBirdImage(m_image, points[0].first, points[0].second);
+
             }
 
             // Draw the lines from the points we gathered
@@ -893,6 +895,22 @@ void CRotoScopeDoc::DrawBird(CGrImage& image, int x1, int y1)
                 m_image[newX][newY * 3] = m_bird[r][c * 4];
                 m_image[newX][newY * 3 + 1] = m_bird[r][c * 4 + 1];
                 m_image[newX][newY * 3 + 2] = m_bird[r][c * 4 + 2];
+            }
+        }
+    }
+}
+
+void CRotoScopeDoc::ClearBirdImage(CGrImage& image, int x1, int y1)
+{
+    for (int r = 0; r < m_bird.GetHeight(); r++)
+    {
+        for (int c = 0; c < m_bird.GetWidth(); c++)
+        {
+            if (m_bird[r][c * 4 + 3] >= 192)
+            {
+                m_image[r][c * 3] = m_image[r][c * 3];
+                m_image[r][c * 3 + 1] = m_image[r][c * 3 + 1];
+                m_image[r][c * 3 + 2] = m_image[r][c * 3 + 2];
             }
         }
     }
