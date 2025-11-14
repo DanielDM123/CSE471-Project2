@@ -19,11 +19,11 @@
 #endif
 #include <corecrt_math_defines.h>
 
-using namespace std;
+using namespace std; // Test
 
 // Simple inline function to range bound a double and cast to a short.
 inline short ShortRange(double a) {return a > 32767 ? 32767 : (a < -32768. ? -32768 : short(a));}
-
+ 
 
 // CRotoScopeDoc
 
