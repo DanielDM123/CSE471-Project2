@@ -86,6 +86,13 @@ private:
     double m_angle;
     CGrImage    m_bird;
 
+    // Move bird vars
+    bool m_upwards;
+    std::vector<int> m_transition;
+    int m_trans_index;
+    int m_frame_cap;
+    int m_start_frame;
+
 public:
     virtual BOOL OnSaveDocument(LPCTSTR lpszPathName);
     void SaveMovieData(IXMLDOMDocument* xmlDoc, IXMLDOMNode* inNode);
@@ -97,6 +104,8 @@ public:
     void DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, int width = 1);
     void DrawBird(CGrImage& image, int x1, int y1);
     void ClearBirdImage(CGrImage& image, int x1, int y1);
+
+    void MoveBird(CGrImage& image, int& x1, int& y1);
 
 };
 

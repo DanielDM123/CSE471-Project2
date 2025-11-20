@@ -63,6 +63,12 @@ CRotoScopeDoc::CRotoScopeDoc()
     m_angle = 0;
     m_bird.LoadFile(L"bird.png");
     m_moviemake.SetProfileName(L"profile720p.prx");
+
+    m_upwards = true;
+    m_transition = { 50, 20, 70 };
+    m_trans_index = 0;
+    m_frame_cap = 10; // 1.5 seconds 45
+    m_start_frame = -1;
 }
 
 //! Destructor
@@ -741,6 +747,11 @@ void CRotoScopeDoc::DrawImage()
         }
         else
         {
+            if (m_start_frame < 0)
+            {
+                m_start_frame = m_movieframe;
+            }
+
             // Draw the bird at the points
             int x = 0;
             int y = 0;
@@ -749,6 +760,10 @@ void CRotoScopeDoc::DrawImage()
                 x = points[0].first;
                 y = points[0].second;
             }
+
+            // Linear Transformation here
+            MoveBird(m_image, x, y);
+
             DrawBird(m_image, x, y);
         }
     }
@@ -915,4 +930,34 @@ void CRotoScopeDoc::ClearBirdImage(CGrImage& image, int x1, int y1)
             }
         }
     }
+}
+
+void CRotoScopeDoc::MoveBird(CGrImage& image, int& x1, int& y1)
+{
+    int falling = 1;
+    if (!m_upwards)
+    {
+        falling = -1;
+    }
+
+    // Linear interpolation
+    double percent = double(m_movieframe - m_start_frame) / m_frame_cap;
+    int temp = percent * m_transition[m_trans_index] * falling + y1;
+    y1 = temp;
+
+    if (percent > 0.999)
+    {
+        m_start_frame = -1;
+
+        if (!m_upwards)
+        {
+            m_trans_index = (m_trans_index + 1) % m_transition.size();
+            m_upwards = true;
+        }
+        else
+        {
+            m_upwards = false;
+        }
+    }
+
 }
