@@ -906,11 +906,36 @@ void CRotoScopeDoc::DrawBird(CGrImage& image, int x1, int y1)
         {
             int newX = r + y1;
             int newY = c - m_bird.GetWidth() / 2 + x1;
+
+            // Check if the pixel is not transparent 
             if (m_bird[r][c * 4 + 3] >= 192)
             {
+                // Check if this part of the bird is the head
+                if (r >= 50)
+                {
+                    // Linear interpolation
+                    int temp = newY;
+                    double percent = double(m_movieframe - m_start_frame) / m_frame_cap;
+                    int falling = (percent < 0.5) ? 1 : -1;
+                    int change = m_transition[m_trans_index] / 2;
+
+                    if (percent < 0.5)
+                    {
+                        temp = percent * change * falling + newY;
+                    }
+                    else
+                    {
+                        temp = percent * change * falling + newY + change;
+                    }
+
+                    newY = temp;
+                }
+
+                // Draw the bird 
                 m_image[newX][newY * 3] = m_bird[r][c * 4];
                 m_image[newX][newY * 3 + 1] = m_bird[r][c * 4 + 1];
                 m_image[newX][newY * 3 + 2] = m_bird[r][c * 4 + 2];
+               
             }
         }
     }
@@ -959,5 +984,5 @@ void CRotoScopeDoc::MoveBird(CGrImage& image, int& x1, int& y1)
             m_upwards = false;
         }
     }
-
+    // When making the XML file, do (1 + frame cap) amount of frames
 }
