@@ -2397,7 +2397,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="717">
@@ -2408,7 +2408,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="718">
@@ -2419,7 +2419,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="719">
@@ -2430,7 +2430,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="720">
@@ -2441,7 +2441,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="721">
@@ -2452,7 +2452,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="722">
@@ -2463,7 +2463,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="723">
@@ -2474,7 +2474,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="724">
@@ -2485,7 +2485,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="725">
@@ -2496,7 +2496,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="726">
@@ -2507,7 +2507,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="727">
@@ -2518,7 +2518,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="728">
@@ -2529,7 +2529,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="729">
@@ -2540,7 +2540,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="730">
@@ -2551,7 +2551,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="731">
@@ -2562,7 +2562,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="732">
@@ -2573,7 +2573,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="733">
@@ -2584,7 +2584,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="734">
@@ -2595,7 +2595,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 <frame num="735">
@@ -2606,7 +2606,7 @@
       
     <point x="663" y="419"/><point x="684" y="0"/>
     <point x="665" y="376"/><point x="295" y="120"/>
-    <point x="295" y="120"/><point x="330" y="180"/>
+    <point x="295" y="120"/><point x="330" y="350"/>
     <point x="667" y="376"/><point x="1071" y="121"/>
 </frame>
 
