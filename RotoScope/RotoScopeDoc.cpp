@@ -1026,8 +1026,8 @@ void CRotoScopeDoc::MoveBird(CGrImage& image, int& x1, int& y1)
 void CRotoScopeDoc::GreenScreen()
 {
     // Create the alpha matte
-    double a1 = 0.8;
-    double a2 = 0.1;
+    double a1 = 1.5;
+    double a2 = 0.9;
     for (int r = 0; r < m_image.GetHeight(); r++)
     {
         // Add another row to the alpha matte
@@ -1043,6 +1043,7 @@ void CRotoScopeDoc::GreenScreen()
             // Vlahos equestion
             // alpha = 1 - a1(Bf - a2 * Rf)
             double val = 1 - a1 * (green - a2 * red);
+
             // Clamp the val between 0 and 1
             if (val > 1)
             {
@@ -1060,7 +1061,17 @@ void CRotoScopeDoc::GreenScreen()
     }
 
     // AND the alpha matte with the garbage mask
+    for (int r = 0; r < m_alpha_matte.size(); r++)
+    {
+        for (int c = 0; c < m_alpha_matte[r].size(); c++)
+        {
+            double alpha = m_alpha_matte[r][c];
 
+            m_image[r][c * 3] = alpha * (m_image[r][c * 3]) + (1 - alpha) * (255 - m_room[r][c]);    // 255 - m_room[r][c];
+            m_image[r][c * 3 + 1] = alpha * (m_image[r][c * 3 + 1]) + (1 - alpha) * (255 - m_room[r][c + 1]);
+            m_image[r][c * 3 + 2] = alpha * (m_image[r][c * 3 + 2]) + (1 - alpha) * (255 - m_room[r][c + 2]);
+        }
+    }
 
     // Decide if we put the forground or background on screen
     // color = alpha * forground + (1-apha) * background
@@ -1072,7 +1083,7 @@ void CRotoScopeDoc::CreateGarbageMask()
     for (int r = 0; r < m_img_garbage_mask.GetHeight(); r++)
     {
         // Add another row to the garbage mask
-        vector<double> temp;
+        vector<int> temp;
         m_garbage_mask.push_back(temp);
 
         for (int c = 0; c < m_img_garbage_mask.GetWidth(); c++)
