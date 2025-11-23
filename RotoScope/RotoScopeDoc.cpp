@@ -59,15 +59,15 @@ CRotoScopeDoc::CRotoScopeDoc()
 	m_image.SetSize(1280, 720);
     m_image.Fill(0, 0, 0);
 
-    m_movieframe = 0;
+    m_movieframe = 0; 
     m_angle = 0;
     m_bird.LoadFile(L"bird.png");
     m_moviemake.SetProfileName(L"profile720p.prx");
 
     m_upwards = true;
-    m_transition = { 50, 20, 70 };
+    m_transition = { 150 };
     m_trans_index = 0;
-    m_frame_cap = 10; // 1.5 seconds 45
+    m_frame_cap = 45; // 1.5 seconds 45
     m_start_frame = -1;
 }
 
@@ -745,7 +745,7 @@ void CRotoScopeDoc::DrawImage()
                 DrawLine(m_image, x1, y1, x2, y2, 5); // Change the width of the line here
             }
         }
-        else
+        else if (points.size() == 1)
         {
             if (m_start_frame < 0)
             {
@@ -762,7 +762,7 @@ void CRotoScopeDoc::DrawImage()
             }
 
             // Linear Transformation here
-            MoveBird(m_image, x, y);
+            MoveBird(m_image, x, y); // UNCOMMENT WHEN MAKING VIDEO
 
             DrawBird(m_image, x, y);
         }
@@ -897,6 +897,13 @@ void CRotoScopeDoc::DrawLine(CGrImage& image, int x1, int y1, int x2, int y2, in
 
 void CRotoScopeDoc::DrawBird(CGrImage& image, int x1, int y1)
 {
+    // Check if we the bird will be drawn out of bounds
+    if (x1 + m_bird.GetWidth() > m_image.GetWidth() || x1 - m_bird.GetWidth() < 0 || 
+        y1 + m_bird.GetHeight() > m_image.GetHeight() || y1 + m_bird.GetHeight() < 0)
+    {
+        return;
+    }
+    
     // This draws the bird at the bottom left corner
     // c is x
     // r is y
@@ -907,6 +914,7 @@ void CRotoScopeDoc::DrawBird(CGrImage& image, int x1, int y1)
             int newX = r + y1;
             int newY = c - m_bird.GetWidth() / 2 + x1;
 
+            // UNCOMMENT WHEN MAKING VIDEO
             // Check if the pixel is not transparent 
             if (m_bird[r][c * 4 + 3] >= 192)
             {
@@ -919,6 +927,7 @@ void CRotoScopeDoc::DrawBird(CGrImage& image, int x1, int y1)
                     int falling = (percent < 0.5) ? 1 : -1;
                     int change = m_transition[m_trans_index] / 2;
 
+                    // Check if we need to move the head left or right
                     if (percent < 0.5)
                     {
                         temp = percent * change * falling + newY;
