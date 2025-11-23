@@ -1,2 +1,55 @@
 <?xml version="1.0"?>
-<movie><frame num="0"/><frame num="1"><point x="506" y="638"/><point x="506" y="450"/><point x="761" y="638"/><point x="761" y="450"/><point x="506" y="638"/><point x="761" y="638"/><point x="506" y="450"/><point x="761" y="450"/><point x="640" y="450"/><point x="671" y="0"/><point x="645" y="396"/><point x="358" y="207"/><point x="360" y="206"/><point x="298" y="481"/><point x="644" y="394"/><point x="895" y="196"/><point x="895" y="195"/><point x="894" y="195"/><point x="895" y="195"/><point x="1068" y="343"/></frame><frame num="2"/><frame num="3"/><frame num="4"/><frame num="5"/><frame num="6"/><frame num="7"/><frame num="8"/><frame num="9"/><frame num="10"/><frame num="11"/><frame num="12"/><frame num="13"/><frame num="14"/><frame num="15"/><frame num="16"/><frame num="17"/><frame num="18"/><frame num="19"/><frame num="20"/><frame num="21"/><frame num="22"/><frame num="23"/><frame num="24"/><frame num="25"/><frame num="26"/><frame num="27"/><frame num="28"/><frame num="29"/><frame num="30"/><frame num="31"/><frame num="32"/><frame num="33"/><frame num="34"/><frame num="35"/><frame num="36"/><frame num="37"/><frame num="38"/><frame num="39"/><frame num="40"/><frame num="41"/><frame num="42"/><frame num="43"><point x="533" y="608"/><point x="538" y="483"/><point x="776" y="602"/><point x="773" y="488"/><point x="660" y="489"/><point x="676" y="129"/><point x="663" y="379"/><point x="301" y="387"/><point x="301" y="386"/><point x="514" y="599"/><point x="662" y="382"/><point x="991" y="395"/><point x="991" y="395"/><point x="795" y="578"/></frame></movie>
+<movie><frame num="0"/>
+  <frame num="1">
+    <point x="506" y="638"/><point x="506" y="450"/>
+    <point x="761" y="638"/><point x="761" y="450"/>
+    <point x="506" y="638"/><point x="761" y="638"/>
+    <point x="506" y="450"/><point x="761" y="450"/>
+    
+    <point x="640" y="450"/><point x="671" y="0"/>
+    <point x="645" y="396"/><point x="358" y="207"/>
+    <point x="360" y="206"/><point x="298" y="481"/>
+    <point x="644" y="394"/><point x="895" y="196"/>
+    <point x="895" y="195"/><point x="894" y="195"/>
+    <point x="895" y="195"/><point x="1068" y="343"/>
+  </frame>
+  <frame num="2"/>
+  <frame num="3"/>
+  <frame num="4"/>
+  <frame num="5"/>
+  <frame num="6"/>
+  <frame num="7"/>
+  <frame num="8"/>
+  <frame num="9"/>
+  <frame num="10"/>
+  <frame num="11"/>
+  <frame num="12"/>
+  <frame num="13"/>
+  <frame num="14"/>
+  <frame num="15"/>
+  <frame num="16"/>
+  <frame num="17"/>
+  <frame num="18"/>
+  <frame num="19"/>
+  <frame num="20"/>
+  <frame num="21"/>
+  <frame num="22"/>
+  <frame num="23"/>
+  <frame num="24"/>
+  <frame num="25"/>
+  <frame num="26"/>
+  <frame num="27"/><frame num="28"/><frame num="29"/><frame num="30"/><frame num="31"/><frame num="32"/><frame num="33"/><frame num="34"/><frame num="35"/><frame num="36"/><frame num="37"/><frame num="38"/><frame num="39"/><frame num="40"/><frame num="41"/><frame num="42"/>
+  
+  <frame num="43">
+    <point x="506" y="638"/><point x="506" y="450"/>
+    <point x="761" y="638"/><point x="761" y="450"/>
+    <point x="506" y="638"/><point x="761" y="638"/>
+    <point x="506" y="450"/><point x="761" y="450"/>
+    
+    <point x="660" y="450"/><point x="676" y="0"/>
+    <point x="660" y="379"/><point x="301" y="387"/>
+    <point x="301" y="386"/><point x="514" y="599"/>
+    <point x="662" y="382"/><point x="991" y="395"/>
+    <point x="991" y="395"/><point x="795" y="578"/>
+  
+  </frame></movie>
