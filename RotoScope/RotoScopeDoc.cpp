@@ -62,6 +62,8 @@ CRotoScopeDoc::CRotoScopeDoc()
     m_movieframe = 0; 
     m_angle = 0;
     m_bird.LoadFile(L"bird.png");
+    m_room.LoadFile(L"img_room.png");
+    m_img_garbage_mask.LoadFile(L"garbage_mask.png");
     m_moviemake.SetProfileName(L"profile720p.prx");
 
     m_upwards = true;
@@ -194,7 +196,7 @@ void CRotoScopeDoc::OnMoviesOpenoutputmovie()
 
     m_movieframe = 0;
     m_angle = 0;
-
+    CreateGarbageMask();
 
     UpdateAllViews(NULL);
 }
@@ -769,6 +771,30 @@ void CRotoScopeDoc::DrawImage()
     }
 
 
+    // Test drawing background img
+    //for (int r = 0; r < m_room.GetHeight(); r++)
+    //{
+    //    for (int c = 0; c < m_room.GetWidth(); c++)
+    //    {
+    //        m_image[r][c * 3] = 255 - m_room[r][c];
+    //        m_image[r][c * 3 + 1] = 255 - m_room[r][c + 1];
+    //        m_image[r][c * 3 + 2] = 255 - m_room[r][c + 2];
+    //    }
+    //}
+
+
+    // Test to draw the garbage mask
+    //for (int r = 0; r < m_garbage_mask.GetHeight(); r++)
+    //{
+    //    for (int c = 0; c < m_garbage_mask.GetWidth(); c++)
+    //    {
+
+    //        m_image[r][c * 3] = m_garbage_mask[r][c * 4];
+    //        m_image[r][c * 3 + 1] = m_garbage_mask[r][c * 4 + 1];
+    //        m_image[r][c * 3 + 2] = m_garbage_mask[r][c * 4 + 2];
+    //        
+    //    }
+    //}
 
     UpdateAllViews(NULL);
 }
@@ -994,4 +1020,74 @@ void CRotoScopeDoc::MoveBird(CGrImage& image, int& x1, int& y1)
         }
     }
     // When making the XML file, do (1 + frame cap) amount of frames
+}
+
+void CRotoScopeDoc::GreenScreen()
+{
+    // Create the alpha matte
+    double a1 = 0.8;
+    double a2 = 0.1;
+    for (int r = 0; r < m_image.GetHeight(); r++)
+    {
+        // Add another row to the alpha matte
+        vector<double> temp;
+        m_alpha_matte.push_back(temp);
+
+        for (int c = 0; c < m_image.GetWidth(); c++)
+        {
+            int blue = m_image[r][c * 3];
+            int green = m_image[r][c * 3 + 1];
+            int red = m_image[r][c * 3 + 2];
+
+            // Vlahos equestion
+            // alpha = 1 - a1(Bf - a2 * Rf)
+            double val = 1 - a1 * (green - a2 * red);
+            // Clamp the val between 0 and 1
+            if (val > 1)
+            {
+                val = 1;
+            }
+            else if (val < 0)
+            {
+                val = 0;
+            }
+
+            // Store the alpha value for this pixel
+            m_alpha_matte[r][c] = val;
+
+        }
+    }
+
+    // AND the alpha matte with the garbage mask
+
+
+    // Decide if we put the forground or background on screen
+    
+}
+
+void CRotoScopeDoc::CreateGarbageMask()
+{
+    for (int r = 0; r < m_img_garbage_mask.GetHeight(); r++)
+    {
+        // Add another row to the garbage mask
+        vector<double> temp;
+        m_garbage_mask.push_back(temp);
+
+        for (int c = 0; c < m_img_garbage_mask.GetWidth(); c++)
+        {
+            int blue = m_img_garbage_mask[r][c * 3];
+            int green = m_img_garbage_mask[r][c * 3 + 1];
+            int red = m_img_garbage_mask[r][c * 3 + 2];
+
+            if (red == 255 && green == 255 && blue == 255 )
+            {
+                m_garbage_mask[r].push_back(1);
+                
+            }
+            else
+            {
+                m_garbage_mask[r].push_back(0);
+            }
+        }
+    }
 }
