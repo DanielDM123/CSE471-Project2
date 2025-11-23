@@ -1026,112 +1026,115 @@
   <frame num="1021"/>
   <frame num="1022"/>
   <frame num="1023"><point x="571" y="284"/><point x="567" y="404"/><point x="682" y="273"/><point x="689" y="412"/></frame>
-  <frame num="1024"><point x="640" y="311"/></frame>
-  <frame num="1025"/>
-  <frame num="1026"/>
-  <frame num="1027"/>
-  <frame num="1028"/>
-  <frame num="1029"/>
-  <frame num="1030"/>
-  <frame num="1031"/>
-  <frame num="1032"/>
-  <frame num="1033"/>
-  <frame num="1034"/>
-  <frame num="1035"/>
-  <frame num="1036"/>
-  <frame num="1037"/>
-  <frame num="1038"/>
-  <frame num="1039"/>
-  <frame num="1040"/>
-  <frame num="1041"/>
-  <frame num="1042"/>
-  <frame num="1043"/>
-  <frame num="1044"/>
-  <frame num="1045"/>
-  <frame num="1046"/>
-  <frame num="1047"/>
-  <frame num="1048"/>
-  <frame num="1049"/>
-  <frame num="1050"/>
-  <frame num="1051"/>
-  <frame num="1052"/>
-  <frame num="1053"/>
-  <frame num="1054"/>
-  <frame num="1055"/>
-  <frame num="1056"/>
-  <frame num="1057"/>
-  <frame num="1058"/>
-  <frame num="1059"/>
-  <frame num="1060"/>
-  <frame num="1061"/>
-  <frame num="1062"/>
-  <frame num="1063"/>
-  <frame num="1064"/>
-  <frame num="1065"/>
-  <frame num="1066"/>
-  <frame num="1067"/>
-  <frame num="1068"/>
-  <frame num="1069"/>
-  <frame num="1070"/>
-  <frame num="1071"/>
-  <frame num="1072"/>
-  <frame num="1073"/>
-  <frame num="1074"/>
-  <frame num="1075"/>
-  <frame num="1076"/>
-  <frame num="1077"/>
-  <frame num="1078"/>
-  <frame num="1079"/>
-  <frame num="1080"/>
-  <frame num="1081"/>
-  <frame num="1082"/>
-  <frame num="1083"/>
-  <frame num="1084"/>
-  <frame num="1085"/>
-  <frame num="1086"/>
-  <frame num="1087"/>
-  <frame num="1088"/>
-  <frame num="1089"/>
-  <frame num="1090"/>
-  <frame num="1091"/>
-  <frame num="1092"/>
-  <frame num="1093"/>
-  <frame num="1094"/>
-  <frame num="1095"/>
-  <frame num="1096"/>
-  <frame num="1097"/>
-  <frame num="1098"/>
-  <frame num="1099"/>
-  <frame num="1100"/>
-  <frame num="1101"/>
-  <frame num="1102"/>
-  <frame num="1103"/>
-  <frame num="1104"/>
-  <frame num="1105"><point x="532" y="253"/></frame>
-  <frame num="1106"/>
-  <frame num="1107"/>
-  <frame num="1108"/>
-  <frame num="1109"/>
-  <frame num="1110"/>
-  <frame num="1111"/>
-  <frame num="1112"/>
-  <frame num="1113"/>
-  <frame num="1114"/>
-  <frame num="1115"/>
-  <frame num="1116"/>
-  <frame num="1117"/>
-  <frame num="1118"/>
-  <frame num="1119"/>
-  <frame num="1120"/>
-  <frame num="1121"/>
-  <frame num="1122"/>
-  <frame num="1123"/>
-  <frame num="1124"/>
-  <frame num="1125"/>
-  <frame num="1126"/>
-  <frame num="1127"/>
-  <frame num="1128"/>
-  <frame num="1129"/>
-  <frame num="1130"/>
-  <frame num="1131"/>
-  <frame num="1132"><point x="416" y="372"/></frame></movie>
+  <frame num="1024"><point x="687" y="190"/></frame>
+  <frame num="1025"><point x="687" y="190"/></frame>
+  <frame num="1026"><point x="687" y="190"/></frame>
+  <frame num="1027"><point x="687" y="190"/></frame>
+  <frame num="1028"><point x="687" y="190"/></frame>
+  <frame num="1029"><point x="687" y="190"/></frame>
+  <frame num="1030"><point x="687" y="190"/></frame>
+  <frame num="1031"><point x="687" y="190"/></frame>
+  <frame num="1032"><point x="687" y="190"/></frame>
+  <frame num="1033"><point x="687" y="190"/></frame>
+  <frame num="1034"><point x="687" y="190"/></frame>
+  <frame num="1035"><point x="687" y="190"/></frame>
+  <frame num="1036"><point x="687" y="190"/></frame>
+  <frame num="1037"><point x="687" y="190"/></frame>
+  <frame num="1038"><point x="687" y="190"/></frame>
+  <frame num="1039"><point x="687" y="190"/></frame>
+  <frame num="1040"><point x="687" y="190"/></frame>
+  <frame num="1041"><point x="687" y="190"/></frame>
+  <frame num="1042"><point x="687" y="190"/></frame>
+  <frame num="1043"><point x="687" y="190"/></frame>
+  <frame num="1044"><point x="687" y="190"/></frame>
+  <frame num="1045"><point x="687" y="190"/></frame>
+  <frame num="1046"><point x="687" y="190"/></frame>
+  <frame num="1047"><point x="687" y="190"/></frame>
+  <frame num="1048"><point x="687" y="190"/></frame>
+  <frame num="1049"><point x="687" y="190"/></frame>
+  <frame num="1050"><point x="687" y="190"/></frame>
+  <frame num="1051"><point x="687" y="190"/></frame>
+  <frame num="1052"><point x="687" y="190"/></frame>
+  <frame num="1053"><point x="687" y="190"/></frame>
+  <frame num="1054"><point x="687" y="190"/></frame>
+  <frame num="1055"><point x="687" y="190"/></frame>
+  <frame num="1056"><point x="687" y="190"/></frame>
+  <frame num="1057"><point x="687" y="190"/></frame>
+  <frame num="1058"><point x="687" y="190"/></frame>
+  <frame num="1059"><point x="687" y="190"/></frame>
+  <frame num="1060"><point x="687" y="190"/></frame>
+  <frame num="1061"><point x="687" y="190"/></frame>
+  <frame num="1062"><point x="687" y="190"/></frame>
+  <frame num="1063"><point x="687" y="190"/></frame>
+  <frame num="1064"><point x="687" y="190"/></frame>
+  <frame num="1065"><point x="687" y="190"/></frame>
+  <frame num="1066"><point x="687" y="190"/></frame>
+  <frame num="1067"><point x="687" y="190"/></frame>
+  <frame num="1068"><point x="687" y="190"/></frame>
+  
+  <frame num="1069"><point x="687" y="340"/></frame>
+  <frame num="1070"><point x="687" y="340"/></frame>
+  <frame num="1071"><point x="687" y="340"/></frame>
+  <frame num="1072"><point x="687" y="340"/></frame>
+  <frame num="1073"><point x="687" y="340"/></frame>
+  <frame num="1074"><point x="687" y="340"/></frame>
+  <frame num="1075"><point x="687" y="340"/></frame>
+  <frame num="1076"><point x="687" y="340"/></frame>
+  <frame num="1077"><point x="687" y="340"/></frame>
+  <frame num="1078"><point x="687" y="340"/></frame>
+  <frame num="1079"><point x="687" y="340"/></frame>
+  <frame num="1080"><point x="687" y="340"/></frame>
+  <frame num="1081"><point x="687" y="340"/></frame>
+  <frame num="1082"><point x="687" y="340"/></frame>
+  <frame num="1083"><point x="687" y="340"/></frame>
+  <frame num="1084"><point x="687" y="340"/></frame>
+  <frame num="1085"><point x="687" y="340"/></frame>
+  <frame num="1086"><point x="687" y="340"/></frame>
+  <frame num="1087"><point x="687" y="340"/></frame>
+  <frame num="1088"><point x="687" y="340"/></frame>
+  <frame num="1089"><point x="687" y="340"/></frame>
+  <frame num="1090"><point x="687" y="340"/></frame>
+  <frame num="1091"><point x="687" y="340"/></frame>
+  <frame num="1092"><point x="687" y="340"/></frame>
+  <frame num="1093"><point x="687" y="340"/></frame>
+  <frame num="1094"><point x="687" y="340"/></frame>
+  <frame num="1095"><point x="687" y="340"/></frame>
+  <frame num="1096"><point x="687" y="340"/></frame>
+  <frame num="1097"><point x="687" y="340"/></frame>
+  <frame num="1098"><point x="687" y="340"/></frame>
+  <frame num="1099"><point x="687" y="340"/></frame>
+  <frame num="1100"><point x="687" y="340"/></frame>
+  <frame num="1101"><point x="687" y="340"/></frame>
+  <frame num="1102"><point x="687" y="340"/></frame>
+  <frame num="1103"><point x="687" y="340"/></frame>
+  <frame num="1104"><point x="687" y="340"/></frame>
+  <frame num="1105"><point x="687" y="340"/></frame>
+  <frame num="1106"><point x="687" y="340"/></frame>
+  <frame num="1107"><point x="687" y="340"/></frame>
+  <frame num="1108"><point x="687" y="340"/></frame>
+  <frame num="1109"><point x="687" y="340"/></frame>
+  <frame num="1110"><point x="687" y="340"/></frame>
+  <frame num="1111"><point x="687" y="340"/></frame>
+  <frame num="1112"><point x="687" y="340"/></frame>
+  <frame num="1113"><point x="687" y="340"/></frame>
+  <frame num="1114"><point x="687" y="340"/></frame>
+  
+  <frame num="1115"><point x="687" y="190"/></frame>
+  <frame num="1116"><point x="687" y="190"/></frame>
+  <frame num="1117"><point x="687" y="190"/></frame>
+  <frame num="1118"><point x="687" y="190"/></frame>
+  <frame num="1119"><point x="687" y="190"/></frame>
+  <frame num="1120"><point x="687" y="190"/></frame>
+  <frame num="1121"><point x="687" y="190"/></frame>
+  <frame num="1122"><point x="687" y="190"/></frame>
+  <frame num="1123"><point x="687" y="190"/></frame>
+  <frame num="1124"><point x="687" y="190"/></frame>
+  <frame num="1125"><point x="687" y="190"/></frame>
+  <frame num="1126"><point x="687" y="190"/></frame>
+  <frame num="1127"><point x="687" y="190"/></frame>
+  <frame num="1128"><point x="687" y="190"/></frame>
+  <frame num="1129"><point x="687" y="190"/></frame>
+  <frame num="1130"><point x="687" y="190"/></frame>
+  <frame num="1131"><point x="687" y="190"/></frame>
+  <frame num="1132"><point x="687" y="190"/></frame>
+</movie>
