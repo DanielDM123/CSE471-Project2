@@ -795,6 +795,7 @@ void CRotoScopeDoc::DrawImage()
     //        
     //    }
     //}
+    GreenScreen();
 
     UpdateAllViews(NULL);
 }
@@ -1053,7 +1054,7 @@ void CRotoScopeDoc::GreenScreen()
             }
 
             // Store the alpha value for this pixel
-            m_alpha_matte[r][c] = val;
+            m_alpha_matte[r].push_back(val);
 
         }
     }
@@ -1062,6 +1063,7 @@ void CRotoScopeDoc::GreenScreen()
 
 
     // Decide if we put the forground or background on screen
+    // color = alpha * forground + (1-apha) * background
     
 }
 
