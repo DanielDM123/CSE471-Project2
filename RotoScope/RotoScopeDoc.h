@@ -85,6 +85,10 @@ private:
 
     double m_angle;
     CGrImage    m_bird;
+    CGrImage m_room;
+    CGrImage m_img_garbage_mask;
+    std::vector<std::vector<int>> m_garbage_mask;
+    std::vector<std::vector<double>> m_alpha_matte;
 
     // Move bird vars
     bool m_upwards;
@@ -106,6 +110,9 @@ public:
     void ClearBirdImage(CGrImage& image, int x1, int y1);
 
     void MoveBird(CGrImage& image, int& x1, int& y1);
+
+    void GreenScreen();
+    void CreateGarbageMask();
 
 };
 

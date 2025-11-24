@@ -71,6 +71,8 @@ CRotoScopeDoc::CRotoScopeDoc()
     m_trans_index = 0;
     m_frame_cap = 45; // 1.5 seconds 45
     m_start_frame = -1;
+
+    CreateGarbageMask();
 }
 
 //! Destructor
@@ -196,7 +198,7 @@ void CRotoScopeDoc::OnMoviesOpenoutputmovie()
 
     m_movieframe = 0;
     m_angle = 0;
-    CreateGarbageMask();
+    // CreateGarbageMask();
 
     UpdateAllViews(NULL);
 }
@@ -703,8 +705,16 @@ void CRotoScopeDoc::DrawImage()
         }
     }
 
+    if (732 <= m_movieframe && m_movieframe <= 815)
+    {
+        GreenScreen();
+    }
+    else if (875 <= m_movieframe && m_movieframe <= 1022)
+    {
+        GreenScreen();
+    }
     // Write any saved drawings into the frame
-    if (m_movieframe < (int)m_draw.size())
+    else if (m_movieframe < (int)m_draw.size())
     {
         // Save the points we get from the XMl file
         vector< pair<int, int> > points;
@@ -795,7 +805,6 @@ void CRotoScopeDoc::DrawImage()
     //        
     //    }
     //}
-    GreenScreen();
 
     UpdateAllViews(NULL);
 }
@@ -1026,8 +1035,10 @@ void CRotoScopeDoc::MoveBird(CGrImage& image, int& x1, int& y1)
 void CRotoScopeDoc::GreenScreen()
 {
     // Create the alpha matte
-    double a1 = 1.5;
-    double a2 = 0.9;
+    double a1 = 10.5;
+    double a2 = 1.5;
+    m_alpha_matte.clear();
+
     for (int r = 0; r < m_image.GetHeight(); r++)
     {
         // Add another row to the alpha matte
@@ -1067,14 +1078,13 @@ void CRotoScopeDoc::GreenScreen()
         {
             double alpha = m_alpha_matte[r][c];
 
+            // Decide if we put the forground or background on screen
+            // color = alpha * forground + (1-apha) * background    
             m_image[r][c * 3] = alpha * (m_image[r][c * 3]) + (1 - alpha) * (255 - m_room[r][c]);    // 255 - m_room[r][c];
             m_image[r][c * 3 + 1] = alpha * (m_image[r][c * 3 + 1]) + (1 - alpha) * (255 - m_room[r][c + 1]);
             m_image[r][c * 3 + 2] = alpha * (m_image[r][c * 3 + 2]) + (1 - alpha) * (255 - m_room[r][c + 2]);
         }
     }
-
-    // Decide if we put the forground or background on screen
-    // color = alpha * forground + (1-apha) * background
     
 }
 
