@@ -806,6 +806,7 @@ void CRotoScopeDoc::DrawImage()
     //    }
     //}
 
+    GreenScreen();
     UpdateAllViews(NULL);
 }
 
@@ -1076,7 +1077,12 @@ void CRotoScopeDoc::GreenScreen()
     {
         for (int c = 0; c < m_alpha_matte[r].size(); c++)
         {
-            double alpha = m_alpha_matte[r][c];
+            double alpha = 0;
+
+            if (m_alpha_matte[r][c] > 0.2 && m_garbage_mask[r][c] == 1)
+            {
+                alpha = m_alpha_matte[r][c];
+            }
 
             // Decide if we put the forground or background on screen
             // color = alpha * forground + (1-apha) * background    
